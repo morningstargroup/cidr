@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP and CIDR Converter</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="/home"><img class="ms-logo" src="mlabs-gradient.svg" alt="Morningstar Labs Logo"></a>
+    </header>
+    
+    <!-- CIDR to IPs -->
+    <h2>CIDR to IPs</h2>
+    <label for="cidr">CIDR Notation:</label>
+    <input type="text" id="cidr" placeholder="e.g., 192.168.0.0/24">
+    <button onclick="convertCIDRtoIPs()">Convert to IPs</button>
+    
+    <h3>Results:</h3>
+    <p id="network-address-cidr">Network Address: </p>
+    <p id="first-usable-ip">First Usable IP: </p>
+    <p id="last-usable-ip">Last Usable IP: </p>
+    <p id="broadcast-address">Broadcast Address: </p>
+    
+    <!-- IPs to CIDR -->
+    <h2>IPs to CIDR</h2>
+    <label for="first-ip">First Usable IP:</label>
+    <input type="text" id="first-ip" placeholder="e.g., 192.168.0.1">
+    
+    <label for="last-ip">Last Usable IP:</label>
+    <input type="text" id="last-ip" placeholder="e.g., 192.168.0.254">
+    
+    <button onclick="convertIPstoCIDR()">Convert to CIDR</button>
+    
+    <h3>Result:</h3>
+    <p id="cidr-result">CIDR Notation: </p>
+
+    <script src="script.js"></script>
+</body>
+</html>
